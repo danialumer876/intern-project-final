@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend
+  name: internproject-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: backend
+      app: internproject-backend
   template:
     metadata:
       labels:
-        app: backend
+        app: internproject-backend
     spec:
       containers:
       - name: backend

@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontend
+  name: internproject-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontend
+      app: internproject-frontend
   template:
     metadata:
       labels:
-        app: frontend
+        app: internproject-frontend
     spec:
       containers:
       - name: frontend
@@ -21,8 +21,8 @@ spec:
         - name: frontend-server
           valueFrom:
             configMapKeyRef:
-              name: intern-project-config
-              key: backend-url
+              name: internproject-configmap
+              key: backendUrl
 ---
 
 
