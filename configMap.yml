@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: internproject-configmap
 data:
-  backendUrl: backend-service
+  backendUrl: internproject-backend
