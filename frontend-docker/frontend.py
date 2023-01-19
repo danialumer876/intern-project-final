@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():  
-    response = requests.get('http://backend-service:5100/response')
+    response = requests.get('http://internproject-backend:5100/response')
     e = datetime.datetime.now()
     data = response.json()
     return f"{e.day}/{e.month}/{e.year} {e.hour}:{e.minute}  Hello {data['name']}"
