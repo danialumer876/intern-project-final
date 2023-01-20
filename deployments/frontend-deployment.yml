@@ -18,7 +18,7 @@ spec:
         ports:
         - containerPort: 5200
         env:
-        - name: frontend-server
+        - name: backend-service-url
           valueFrom:
             configMapKeyRef:
               name: internproject-configmap
